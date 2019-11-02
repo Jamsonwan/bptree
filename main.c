@@ -19,12 +19,18 @@ int main(int argc, const char* argv[]){
 	printf("\n");
 	TravelData(T);
 	printf("\n");
-	res = SearchBPTree(T,185);
+	res = SearchBPTree(T,85);
 	if (res->tag == True){
 		printf("Find! value is: %d.\n", res->pt->value[res->i]);
 	}else{
 		printf("not found!\n");
 	}
+        
+	printf("Remove 37:\n");
+	Remove(T, 37);
+	printf("Remove 44:\n");
+	Remove(T, 44);
+	Travel(T);
 	Destroy(T);
 
 	return 0;
